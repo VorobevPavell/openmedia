@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Plate num search{% endblock %}
+
+{% block content %}
+<form action="" method="post" id="search-form">
+  {% csrf_token %}
+  <div class="search" style="margin: 50px; text-align: center">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Поиск по гос. номеру</label>
+      <input type="text" class="form-control" id="plate_number" name="plate_number" placeholder="A123AA123" required>
+      <input type="submit" class="btn btn-primary" value="Найти" id="plate_number_search" style="margin-top: 10px" onclick="showLoadingLabel()">
+    </div>
+  </div>
+</form>
+{% endblock %}

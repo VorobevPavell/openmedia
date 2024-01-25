@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Vin search{% endblock %}
+
+{% block content %}
+<form action="" method="post" id="search-form">
+{% csrf_token %}
+
+    <div class="search" style="margin: 50px; text-align: center">
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Поиск по vin номеру</label>
+  <input type="text" class="form-control" id="vin" name="vin" placeholder="X7LLSRB1HAH548712" required>
+    <input type="submit" class="btn btn-primary" value="Найти" id="vin_search" name="vin_search" style="margin-top: 10px" onclick="showLoadingLabel()">
+    </div>
+    </div>
+</form>
+{% endblock %}
